@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;;;;;;;;;;;;;EAgBE",
+    "sources": [
+        "../course/advanced-css-course-master/Trillo/starter/sass/main.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
