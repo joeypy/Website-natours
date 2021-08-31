@@ -3,7 +3,6 @@
     // BACKGROUND AND NAV
     &__checkbox {
         display: none;
-
     }
 
     &__button {
@@ -18,6 +17,16 @@
         box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
         text-align: center;
         cursor: pointer;
+
+        @include respond(tab-port){
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(phone){
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__background {
@@ -30,6 +39,16 @@
         background-image: $linear-gradient-menu;
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
+
+        @include respond(tab-port){
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone){
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {
@@ -41,6 +60,7 @@
 
         opacity: 0;
         width: 0;
+        visibility: hidden;
         transition: all .8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
     }
@@ -95,6 +115,7 @@
     }
 
     &__checkbox:checked ~ &__nav {
+        visibility: visible;
         opacity: 1;
         width: 100%;
     }
